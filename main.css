@@ -5,11 +5,11 @@
     min-height: 100%;
     margin: 0;
     padding: 0;
-    font-family: "Montserrat", sans-serif;
-    font-weight: normal; }
+    font-weight: normal;
+    font-family: "Montserrat", sans-serif; }
   * .link {
+    font-weight: normal;
     font-family: inherit;
-    font-weight: bold;
     text-decoration: none;
     padding: 1rem;
     font-size: 1rem;
@@ -19,8 +19,8 @@
       background: white;
       color: black; }
   * .btn {
-    font-family: inherit;
     font-weight: normal;
+    font-family: inherit;
     font-size: 1.2rem;
     padding: .2rem .7rem;
     border: 1px solid #b3b3b3;
@@ -68,8 +68,8 @@
   .main-header .brend {
     vertical-align: middle; }
     .main-header .brend > a {
-      font-family: "Montserrat", sans-serif;
       font-weight: bold;
+      font-family: "Montserrat", sans-serif;
       text-decoration: none;
       font-size: 2rem;
       color: #19dc01;
@@ -157,9 +157,8 @@
     min-width: 40rem;
     padding: 0 2rem; }
     .main-content .main .article .article-head {
-      font-size: 2rem;
-      font-family: "Montserrat", "Roboto", sans-serif;
       font-weight: bold;
+      font-family: "Montserrat", "Roboto", sans-serif;
       color: #6f0201; }
     .main-content .main .article .article-desc {
       font-family: "Roboto", sans-serif;
@@ -273,5 +272,34 @@
   color: #fff;
   background: gray;
   opacity: .5; }
+
+.list {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row nowrap; }
+  .list .list-item {
+    margin-right: .5rem;
+    list-style: none; }
+
+.list-item-red {
+  color: red; }
+
+.list-item-green {
+  color: green; }
+
+.list-item-yellow {
+  color: yellow; }
+
+.list-item-gray {
+  color: gray; }
+
+.list-item-orange {
+  color: orange; }
+
+.list-item-blue {
+  color: blue; }
 
 /*# sourceMappingURL=main.css.map */
