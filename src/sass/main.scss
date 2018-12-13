@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:700|Roboto:300i');
 @import './variables'; //import partial
+@import './mixins';
 
 
 * {
@@ -24,8 +25,7 @@
 
         &:hover,
         &:active {
-            background: $white;
-            color: $black;
+            @include btn-change-colors($white, $black);
         }
     }
 
@@ -45,24 +45,20 @@
         }
 
         &.btn-primary {
-            color: $white;
-            background: $primary;
+            @include btn-change-colors($primary);
 
             &:hover,
             &:active {
-                color: $black;
-                background: lighten($primary, 10%);
+                @include btn-change-colors(lighten($primary, 10%), $black);
             }
         }
 
         &.btn-secondary {
-            color: $black;
-            background: $secondary;
+            @include btn-change-colors($secondary, $black);
 
             &:hover,
             &:active {
-                color: $white;
-                background: darken($secondary, 10%);
+                @include btn-change-colors(darken($secondary, 10%));
             }
         }
 
@@ -78,10 +74,10 @@
     position: fixed;
     left: 0;
     top: 0;
-    display: flex;
+    @include display_flex_box;
     flex-flow: row nowrap;
     justify-content: space-between;
-    align-items: center;
+    @include flex_align_items;
     padding: 1rem;
     background: lighten($black, 20%);
     z-index: 1;
@@ -105,7 +101,7 @@
     }
 
     .main-nav__list {
-        display: flex;
+        @include display_flex_box;
         flex-flow: row nowrap;
 
         margin: auto;
@@ -121,19 +117,19 @@
 }
 
 .main-content {
-    display: flex;
+    @include display_flex_box;
     flex-flow: row nowrap;
     text-align: center;
     padding-top: 4.4rem;
     background: $content-block-bg;
 
     .sidebar {
-        order: 2;
+        @include flex_box_order(2);
         min-height: 100vh;
-        display: flex;
+        @include display_flex_box;
         flex-flow: column nowrap;
         justify-content: center;
-        align-items: center;
+        @include flex_align_items;
         min-width: 20rem;
         padding: 0;
         margin: auto;
@@ -168,13 +164,12 @@
 
     .main {
         min-height: 100vh;
-        display: flex;
+        @include display_flex_box;
         flex-flow: column nowrap;
         justify-content: space-around;
-        order: 1;
+        @include flex_box_order;
         min-width: 40rem;
         padding: 0 2rem;
-        // border: 1px solid red;
 
         .article {
 
@@ -201,10 +196,10 @@
 
     .buttons-block__list {
         padding: 2rem 0;
-        display: flex;
+        @include display_flex_box;
         flex-flow: row nowrap;
         justify-content: space-between;
-        align-items: center;
+        @include flex_align_items;
         list-style: none;
     }
 }
@@ -247,6 +242,17 @@
     }
 }
 
+.links-block {
+    padding: 10rem 0;
+    @include display_flex_box;
+    flex-flow: column nowrap;
+    justify-content: center;
+    @include flex_align_items;
+}
+
 .clearfix {
     clear: both;
 }
+
+// components
+@import './components/links';

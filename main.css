@@ -30,17 +30,17 @@
     * .btn:hover, * .btn:active {
       cursor: pointer; }
     * .btn.btn-primary {
-      color: white;
-      background: #ef2929; }
+      background: #ef2929;
+      color: #fff; }
       * .btn.btn-primary:hover, * .btn.btn-primary:active {
-        color: black;
-        background: #f35858; }
+        background: #f35858;
+        color: black; }
     * .btn.btn-secondary {
-      color: black;
-      background: #fcaf3e; }
+      background: #fcaf3e;
+      color: black; }
       * .btn.btn-secondary:hover, * .btn.btn-secondary:active {
-        color: white;
-        background: #fb9a0c; }
+        background: #fb9a0c;
+        color: #fff; }
     * .btn:disabled {
       opacity: 0.5;
       cursor: not-allowed; }
@@ -50,9 +50,17 @@
   position: fixed;
   left: 0;
   top: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
   align-items: center;
   padding: 1rem;
   background: #333333;
@@ -69,6 +77,10 @@
       .main-header .brend > a:hover, .main-header .brend > a:active {
         color: #13a901; }
   .main-header .main-nav__list {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-flow: row nowrap;
     margin: auto;
@@ -81,17 +93,33 @@
   margin: auto; }
 
 .main-content {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-flow: row nowrap;
   text-align: center;
   padding-top: 4.4rem;
   background: #fff502; }
   .main-content .sidebar {
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -ms-flex-order: 2;
+    -webkit-order: 2;
     order: 2;
     min-height: 100vh;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
     align-items: center;
     min-width: 20rem;
     padding: 0;
@@ -114,9 +142,17 @@
             border-bottom: 1px solid black; }
   .main-content .main {
     min-height: 100vh;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -ms-flex-order: 1;
+    -webkit-order: 1;
     order: 1;
     min-width: 40rem;
     padding: 0 2rem; }
@@ -136,9 +172,17 @@
   background: rgba(33, 33, 255, 0.5); }
   .buttons-block .buttons-block__list {
     padding: 2rem 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
     align-items: center;
     list-style: none; }
 
@@ -167,7 +211,67 @@
     float: right;
     background: #3465a4; }
 
+.links-block {
+  padding: 10rem 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center; }
+
 .clearfix {
   clear: both; }
+
+.danger {
+  display: inline-block;
+  margin: auto;
+  padding: .5rem 1rem;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #fff;
+  background: #df0e0e;
+  border: 1px solid #f22e2e;
+  border-radius: 3px; }
+
+.alert {
+  display: inline-block;
+  margin: auto;
+  padding: .5rem 1rem;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #fff;
+  background: #af0b0b;
+  border: 1px solid #7f0808;
+  border-radius: 8px; }
+
+.secondary {
+  display: inline-block;
+  margin: auto;
+  padding: .5rem 1rem;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #fff;
+  background: #fcaf3e; }
+
+.disabled {
+  display: inline-block;
+  margin: auto;
+  padding: .5rem 1rem;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #fff;
+  background: gray;
+  opacity: .5; }
 
 /*# sourceMappingURL=main.css.map */
