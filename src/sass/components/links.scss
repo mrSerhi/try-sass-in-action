@@ -1,0 +1,28 @@
+.danger {
+    @include link_style {
+        background: $danger;
+        border: 1px solid lighten($danger, 10%);
+        border-radius: 3px;
+    }
+}
+
+.alert {
+    @include link_style {
+        background: $alert;
+        border: 1px solid darken($alert, 10%);
+        border-radius: 8px;
+    }
+}
+
+.secondary {
+    @include link_style {
+        background: $secondary;
+    }
+}
+
+.disabled {
+    @include link_style {
+        background: $gray;
+        opacity: .5;
+    }
+}
