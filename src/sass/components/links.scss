@@ -26,3 +26,16 @@
         opacity: .5;
     }
 }
+
+.list {
+    @include display_flex_box;
+    flex-flow: row nowrap;
+
+    .list-item {
+        margin-right: .5rem;
+        list-style: none;
+    }
+}
+
+// mixin which change color of list items by class number
+@include list_style;
