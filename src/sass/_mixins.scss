@@ -22,7 +22,7 @@
 }
 
 // mixins for the flex-box property
-@mixin display_flex_box() {
+@mixin display_flex_box {
     display: -webkit-box; 
     display: -moz-box;
     display: -ms-flexbox;
