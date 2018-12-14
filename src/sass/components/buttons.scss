@@ -1,0 +1,37 @@
+
+.button-block {
+    @include display_flex_box;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    @include flex_align_items;
+    min-height: 200px;
+    padding: 0;
+    margin: auto;
+
+    .button-block__button {
+        @extend .btn;
+
+        &--secondary {
+            @extend .btn-secondary;
+        }
+
+        &--primary {
+            @extend .btn-primary;
+        }
+
+        &:disabled {
+            @extend .btn:disabled;
+            
+            .button-block__button-badg {
+                background: $gray;
+            }
+        }
+
+        &-badg {
+            display: inline-block;
+            width: 3rem;
+            color: $white;
+            background: $link-color-green;
+        }
+    }
+}

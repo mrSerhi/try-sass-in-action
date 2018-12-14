@@ -13,6 +13,7 @@
         @include weight_text() {
             font-family: $common-font-family;
         }
+
     }
 
     .link {
@@ -32,6 +33,7 @@
     }
 
     .btn {
+        position: relative;
         @include weight_text() {
             font-family: inherit;
         }
@@ -47,7 +49,16 @@
             cursor: pointer;
         }
 
-        &.btn-primary {
+        &-alert {
+            @include btn-change-colors($alert);
+
+            &:hover,
+            &:active {
+                @include btn-change-colors(lighten($alert , 10%));
+            }
+        }
+
+        &-primary {
             @include btn-change-colors($primary);
 
             &:hover,
@@ -56,7 +67,7 @@
             }
         }
 
-        &.btn-secondary {
+        &-secondary {
             @include btn-change-colors($secondary, $black);
 
             &:hover,
@@ -260,3 +271,4 @@
 
 // components
 @import './components/links';
+@import './components/buttons';

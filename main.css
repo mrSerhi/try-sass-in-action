@@ -18,7 +18,8 @@
     * .link:hover, * .link:active {
       background: white;
       color: black; }
-  * .btn {
+  * .btn, * .button-block .button-block__button, .button-block * .button-block__button {
+    position: relative;
     font-weight: normal;
     font-family: inherit;
     font-size: 1.2rem;
@@ -27,21 +28,27 @@
     border-radius: 4px;
     outline: none;
     transition: all .3s 0s ease-out; }
-    * .btn:hover, * .btn:active {
+    * .btn:hover, * .button-block .button-block__button:hover, .button-block * .button-block__button:hover, * .btn:active, * .button-block .button-block__button:active, .button-block * .button-block__button:active {
       cursor: pointer; }
-    * .btn.btn-primary {
+    * .btn-alert {
+      background: #af0b0b;
+      color: #fff; }
+      * .btn-alert:hover, * .btn-alert:active {
+        background: #df0e0e;
+        color: #fff; }
+    * .btn-primary, * .button-block .button-block__button--primary, .button-block * .button-block__button--primary {
       background: #ef2929;
       color: #fff; }
-      * .btn.btn-primary:hover, * .btn.btn-primary:active {
+      * .btn-primary:hover, * .button-block .button-block__button--primary:hover, .button-block * .button-block__button--primary:hover, * .btn-primary:active, * .button-block .button-block__button--primary:active, .button-block * .button-block__button--primary:active {
         background: #f35858;
         color: black; }
-    * .btn.btn-secondary {
+    * .btn-secondary, * .button-block .button-block__button--secondary, .button-block * .button-block__button--secondary {
       background: #fcaf3e;
       color: black; }
-      * .btn.btn-secondary:hover, * .btn.btn-secondary:active {
+      * .btn-secondary:hover, * .button-block .button-block__button--secondary:hover, .button-block * .button-block__button--secondary:hover, * .btn-secondary:active, * .button-block .button-block__button--secondary:active, .button-block * .button-block__button--secondary:active {
         background: #fb9a0c;
         color: #fff; }
-    * .btn:disabled {
+    * .btn:disabled, * .button-block .button-block__button:disabled, .button-block * .button-block__button:disabled {
       opacity: 0.5;
       cursor: not-allowed; }
 
@@ -301,5 +308,29 @@
 
 .list-item-blue {
   color: blue; }
+
+.button-block {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  min-height: 200px;
+  padding: 0;
+  margin: auto; }
+  .button-block .button-block__button:disabled .button-block__button-badg {
+    background: gray; }
+  .button-block .button-block__button-badg {
+    display: inline-block;
+    width: 3rem;
+    color: white;
+    background: #19dc01; }
 
 /*# sourceMappingURL=main.css.map */
